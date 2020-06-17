@@ -1,0 +1,59 @@
+{
+  "name": "healthcare",
+  "version": "1.0.0",
+  "description": "full stack react hooks boilerplate with authentication",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build  && npm run seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moshecstern/healthcare.git"
+  },
+  "keywords": [
+    "mern",
+    "fullstack",
+    "react",
+    "react-hooks",
+    "node",
+    "Healthcare"
+  ],
+  "engines": {
+    "node": "13.x"
+  },
+  "author": "Moshe Stern",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moshecstern/healthcare/issues"
+  },
+  "homepage": "https://github.com/moshecstern/healthcare#readme",
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "@material-ui/lab": "^4.0.0-alpha.55",
+    "axios": "^0.18.0",
+    "bcrypt": "^4.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.3",
+    "google-map-react": "^1.1.7",
+    "if-env": "^1.0.4",
+    "js-cookie": "^2.2.1",
+    "mongoose": "^5.9.17",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "react-swipeable-views": "^0.13.9",
+    "react-swipeable-views-utils": "^0.13.9"
+  }
+}
