@@ -51,7 +51,7 @@
     "mongoose": "^5.9.17",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0",
-    "passport-jwt": "^4.0.0",
+    "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
     "react-swipeable-views": "^0.13.9",
     "react-swipeable-views-utils": "^0.13.9"
